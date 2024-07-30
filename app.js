@@ -17,6 +17,9 @@ const app = Vue.createApp({
         },
         toggleShowBooks(){
             this.showBooks = !this.showBooks
+        },
+        handleEvent(){
+            console.log('hola spada')
         }
     }
 })
