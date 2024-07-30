@@ -8,8 +8,10 @@
 <body>
     <h1>Hello Vue :)</h1>
     <div id="app">
-        <p>{{ title }}</p>
-        <p>{{ author }} - {{ age }}</p>
+        <div v-if="showBooks">
+            <p>{{ title }}</p>
+            <p>{{ author }} - {{ age }}</p>
+        </div>
 
         <!-- v for vue - on : actions-->
         <button v-on:click="age ++">Increase Age</button>
@@ -18,6 +20,11 @@
         <button v-on:click="age --">Decrease Age</button>
         <!-- whenever we click the text button "Update Title", it will run the changeTitle method on app.js -->
         <div @click="changeTitle('Hola Potta')">Update Title</div>
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <span v-else>Show Books</span>
+            <!-- <span>Show Books</span> -->
+        </button>
     </div>
 
     <script src="app.js"></script>
