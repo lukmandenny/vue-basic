@@ -11,8 +11,12 @@
         <p>{{ title }}</p>
         <p>{{ author }} - {{ age }}</p>
 
+        <!-- v for vue - on : actions-->
         <button v-on:click="age ++">Increase Age</button>
+        <!-- on "" is a javascript code, the java script code will run whenever we click -->
+        <!-- exp Decrease Age is a variable name for the button -->
         <button v-on:click="age --">Decrease Age</button>
+        <!-- whenever we click the text button "Update Title", it will run the changeTitle method on app.js -->
         <div @click="changeTitle('Hola Potta')">Update Title</div>
     </div>
 

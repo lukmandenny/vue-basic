@@ -9,6 +9,7 @@ const app = Vue.createApp({
         }
     }, 
     methods: {
+        // newTitle is an arguments
         changeTitle(newtitle){
             console.log('you clicked me')
             this.title = newtitle
