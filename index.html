@@ -18,12 +18,17 @@
 <body>
     <h1>Hello Vue :)</h1>
     <div id="app">
+        <!-- Attribute Binding -->
+        <!-- <a v-bind:href='url'>Youtube</a> -->
+        <a :href='url'>Youtube</a> <!-- gini juga dibaca v-bin, lebih simple -->
+
         <div v-if="showBooks">
             <p>{{ title }}</p>
             <p>{{ author }} - {{ age }}</p>
             <br>
             <ul>
                 <li v-for="book in books">
+                    <img :src="book.img" :alt="book.title">
                     <h3>{{ book.title }}</h3>
                     <p>{{ book.author }}</p>
                 </li>

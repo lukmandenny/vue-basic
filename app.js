@@ -3,6 +3,7 @@ const app = Vue.createApp({
     // template: '<h2>This is a template</h2>'
     data() {
         return {
+            url: 'https://youtube.com',
             showBooks: true,
             title: 'The Final Empire',
             author: 'Brandon Sanderson',
@@ -11,9 +12,9 @@ const app = Vue.createApp({
             y: 0,
 
             books:[
-                {title: 'The Way of King', author: 'Patrick Rothfuss'},
-                {title: 'Name of The Wind', author: 'Brandon Sanderson'},
-                {title: 'The Final Empire', author: 'Brandon Sanderson'},
+                {title: 'The Way of King', author: 'Patrick Rothfuss', img: 'assets/1.png' },
+                {title: 'Name of The Wind', author: 'Brandon Sanderson', img:'assets/2.png'},
+                {title: 'The Final Empire', author: 'Brandon Sanderson', img:'assets/3.png'},
             ]
         }
     }, 
