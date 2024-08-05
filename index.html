@@ -13,6 +13,29 @@
             margin: 20px;
             display: inline-block;
         }
+        body{
+            background: #eee;
+            max-width: 960px;
+            margin: 20px auto;
+        }
+        p,h3,ul{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style-type: none;
+            background: #fff;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        li.fav{ 
+            background: #ff9ed2;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -22,12 +45,14 @@
         <!-- <a v-bind:href='url'>Youtube</a> -->
         <a :href='url'>Youtube</a> <!-- gini juga dibaca v-bin, lebih simple -->
 
+        <p>{{ filteredBooks }}</p>
+
         <div v-if="showBooks">
             <p>{{ title }}</p>
             <p>{{ author }} - {{ age }}</p>
             <br>
             <ul>
-                <li v-for="book in books">
+                <li v-for="book in filteredBooks" :class="{ fav: book.isFav }" @click="toggleChangeisFav(book)">
                     <img :src="book.img" :alt="book.title">
                     <h3>{{ book.title }}</h3>
                     <p>{{ book.author }}</p>
